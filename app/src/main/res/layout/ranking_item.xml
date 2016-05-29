@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/ranking_rank"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="@string/ranking"/>
+
+    <TextView
+        android:id="@+id/ranking_team"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:text="@string/ranking_team_name"/>
+
+    <TextView
+        android:id="@+id/ranking_games"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ranking_played_games"/>
+
+    <TextView
+        android:id="@+id/ranking_wins"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ranking_wins"/>
+
+    <TextView
+        android:id="@+id/ranking_draws"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ranking_draws"/>
+
+    <TextView
+        android:id="@+id/ranking_loses"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ranking_loses"/>
+
+    <TextView
+        android:id="@+id/ranking_goals"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ranking_goals"/>
+
+    <TextView
+        android:id="@+id/ranking_scores"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ranking_scores"/>
+
+</LinearLayout>

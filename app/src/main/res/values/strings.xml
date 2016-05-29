@@ -1,4 +1,25 @@
 <resources>
+    <!-- Applicacio -->
     <string name="app_name">CampionatLliga</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Vistes -->
+    <string-array name="tab_layout_titles">
+        <item>rankings</item>
+        <item>weeks</item>
+        <item>teams</item>
+    </string-array>
+
+    <!--Ranking-->
+    <string name="ranking">#</string>
+    <string name="ranking_team_name">Equip</string>
+    <string name="ranking_played_games">PJ</string>
+    <string name="ranking_wins">V</string>
+    <string name="ranking_draws">E</string>
+    <string name="ranking_loses">D</string>
+    <string name="ranking_goals">G</string>
+    <string name="ranking_scores">PTS</string>
+
+
+
 </resources>
