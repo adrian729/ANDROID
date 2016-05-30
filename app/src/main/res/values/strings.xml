@@ -11,7 +11,7 @@
     </string-array>
 
     <!--Ranking-->
-    <string name="ranking">#</string>
+    <string name="ranking_rank">#</string>
     <string name="ranking_team_name">Equip</string>
     <string name="ranking_played_games">PJ</string>
     <string name="ranking_wins">V</string>
@@ -20,6 +20,7 @@
     <string name="ranking_goals">G</string>
     <string name="ranking_scores">PTS</string>
 
-
+    <!--Teams-->
+    <string name="team_name">Nom Equip</string>
 
 </resources>

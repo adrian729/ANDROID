@@ -23,7 +23,7 @@ public class Rankings extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.rankings_layout, container, false);
 
-        ListView listView = (ListView) view.findViewById(R.id.listView);
+        ListView listView = (ListView) view.findViewById(R.id.rankings_list_view);
 
         this.items = new ArrayList();
         for(int i = 0; i < 10; ++i) items.add(new RankingsItem(i+1, "team"+i, 99, 99, 99, 99));

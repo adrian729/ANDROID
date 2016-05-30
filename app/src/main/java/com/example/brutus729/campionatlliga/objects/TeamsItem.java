@@ -1,8 +1,6 @@
 package com.example.brutus729.campionatlliga.objects;
 
-/**
- * Created by brutus729 on 30/05/16.
- */
+
 public class TeamsItem {
 
 
@@ -24,4 +22,5 @@ public class TeamsItem {
     public void setTeamsName(String team_name) {
         this.name = team_name;
     }
+
 }

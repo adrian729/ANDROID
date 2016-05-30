@@ -1,5 +1,6 @@
 package com.example.brutus729.campionatlliga.appearance;
 
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,7 +42,7 @@ public class RankingsItemAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         View rowView = convertView;
-        /** Sense HOLDER */
+        /** Sense HOLDER
         if(convertView == null){
             // Create a new view into the list.
             LayoutInflater inflater = (LayoutInflater) context
@@ -67,8 +68,9 @@ public class RankingsItemAdapter extends BaseAdapter {
         loses.setText(item.getLoses());
         goals.setText(item.getGoals());
         score.setText(item.getScore());
+        */
 
-        /** TRY TO USE HOLDER (DOESNT WORK! DKW)
+        /** TRY TO USE HOLDER */
         ViewHolder holder;
         if (convertView == null) {
             // Create a new view into the list.
@@ -76,19 +78,20 @@ public class RankingsItemAdapter extends BaseAdapter {
             rowView = inflater.inflate(R.layout.ranking_item, parent, false);
 
             holder = new ViewHolder();
-            holder.rank = (TextView) convertView.findViewById(R.id.ranking_rank);
-            holder.team_name = (TextView) convertView.findViewById(R.id.ranking_team);
-            holder.played_games = (TextView) convertView.findViewById(R.id.ranking_games);
-            holder.wins = (TextView) convertView.findViewById(R.id.ranking_wins);
-            holder.draws = (TextView) convertView.findViewById(R.id.ranking_draws);
-            holder.loses = (TextView) convertView.findViewById(R.id.ranking_loses);
-            holder.goals = (TextView) convertView.findViewById(R.id.ranking_goals);
-            holder.score = (TextView) convertView.findViewById(R.id.ranking_scores);
-            convertView.setTag(holder);
+            holder.rank = (TextView) rowView.findViewById(R.id.ranking_rank);
+            holder.team_name = (TextView) rowView.findViewById(R.id.ranking_team);
+            holder.played_games = (TextView) rowView.findViewById(R.id.ranking_games);
+            holder.wins = (TextView) rowView.findViewById(R.id.ranking_wins);
+            holder.draws = (TextView) rowView.findViewById(R.id.ranking_draws);
+            holder.loses = (TextView) rowView.findViewById(R.id.ranking_loses);
+            holder.goals = (TextView) rowView.findViewById(R.id.ranking_goals);
+            holder.score = (TextView) rowView.findViewById(R.id.ranking_scores);
+            rowView.setTag(holder);
         }
         else{
-            holder = (ViewHolder) rowView.getTag();
+            holder = (ViewHolder) convertView.getTag();
         }
+        RankingsItem item = this.items.get(position);
         holder.rank.setText(item.getRank());
         holder.team_name.setText(item.getTeamName());
         holder.played_games.setText(item.getPlayedGames());
@@ -97,12 +100,12 @@ public class RankingsItemAdapter extends BaseAdapter {
         holder.loses.setText(item.getLoses());
         holder.goals.setText(item.getGoals());
         holder.score.setText(item.getScore());
-        /*FI TRY TO USE HOLDER  */
+        /*FI TRY TO USE HOLDER */
 
         return rowView;
     }
 
-    /** TRY TO USE HOLDER (DOESNT WORK! DKW)
+    /** TRY TO USE HOLDER */
     static class ViewHolder {
         TextView rank;
         TextView team_name;
@@ -113,6 +116,6 @@ public class RankingsItemAdapter extends BaseAdapter {
         TextView goals;
         TextView score;
     }
-    */
+    /*FI TRY TO USE HOLDER */
 
 }
