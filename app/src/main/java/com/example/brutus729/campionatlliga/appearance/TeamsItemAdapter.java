@@ -45,7 +45,8 @@ public class TeamsItemAdapter extends BaseAdapter{
         ViewHolder holder;
         if (convertView == null) {
             // Create a new view into the list.
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater =
+                    (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             rowView = inflater.inflate(R.layout.team_item, parent, false);
 
             holder = new ViewHolder();

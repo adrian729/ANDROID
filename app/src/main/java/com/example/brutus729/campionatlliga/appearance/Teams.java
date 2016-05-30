@@ -1,6 +1,7 @@
 package com.example.brutus729.campionatlliga.appearance;
 
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -23,7 +24,6 @@ public class Teams extends Fragment {
     private List items;
 
     private TeamsDataSource dataSource;
-    private SimpleCursorAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -34,8 +34,9 @@ public class Teams extends Fragment {
         //Crear nuevo objeto QuotesDataSource
         dataSource = new TeamsDataSource(container.getContext());
 
-        //Iniciando el nuevo Adaptador
-        adapter = new SimpleCursorAdapter(
+
+        /**Prueba con SimpleCursorAdapter (no me gusta, pocas opciones que yo sepa)
+        SimpleCursorAdapter adapter = new SimpleCursorAdapter(
                 container.getContext(),
                 android.R.layout.two_line_list_item,
                 dataSource.getAllTeams(),
@@ -45,17 +46,17 @@ public class Teams extends Fragment {
                 SimpleCursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER
 
         );
-
-        /*
-        this.items = new ArrayList();
-        for(int i = 0; i < 10; ++i) items.add(new TeamsItem("equip"+i));
-        */
-        // Sets the data behind this ListView
-        //listView.setAdapter(new TeamsItemAdapter(container.getContext(), items));
-
         listView.setAdapter(adapter);
+        */
 
-        /*
+        this.items = new ArrayList();
+        dataSource = new TeamsDataSource(container.getContext());
+        Cursor allTeams = dataSource.getAllTeams();
+        for(int i = 0; i < 10; ++i) items.add(new TeamsItem("equip"+i));
+
+        /**Prueba con TeamsItemAdapter*/
+        // Sets the data behind this ListView
+        listView.setAdapter(new TeamsItemAdapter(container.getContext(), items));
         // Register a callback to be invoked when an item in this AdapterView
         // has been clicked
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -67,7 +68,7 @@ public class Teams extends Fragment {
                         Toast.LENGTH_SHORT).show();
             }
         });
-        */
+
         return view;
     }
 

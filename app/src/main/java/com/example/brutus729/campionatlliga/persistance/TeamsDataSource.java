@@ -34,7 +34,7 @@ public class TeamsDataSource {
     //Scripts de inserción por defecto
     public static final String INSERT_TEAMS_SCRIPT =
             "insert into " + TEAMS_TABLE_NAME
-                    + " values(\"Equip0\",\"E0\"),"
+                    + " values(null,\"Equip0\",\"E0\"),"
                     + "(null,\"Equip1\",\"E1\"),"
                     + "(null,\"Equip2\",\"E2\"),"
                     + "(null,\"Equip3\",\"E3\"),"
@@ -73,8 +73,7 @@ public class TeamsDataSource {
         return database.rawQuery(query, new String[]{"2"});
         */
         //Seleccionamos todas las filas de la tabla Teams
-        return database.rawQuery(
-                "select * from " + TEAMS_TABLE_NAME, null);
+        return database.rawQuery("select * from " + TEAMS_TABLE_NAME, null);
     }
 
 }

@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class TeamsReaderDbHelper  extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "Teams.db";
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 2;
 
     public TeamsReaderDbHelper(Context context){
         super(context,DATABASE_NAME,null,DATABASE_VERSION);
@@ -16,10 +16,6 @@ public class TeamsReaderDbHelper  extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-
-        /**DROP THE TABLES!
-        db.execSQL(TeamsDataSource.DELETE_TEAMS_SCRIPT);
-        */
         //Crear la tabla Quotes
         db.execSQL(TeamsDataSource.CREATE_TEAMS_SCRIPT);
         //Insertar registros iniciales
@@ -33,9 +29,12 @@ public class TeamsReaderDbHelper  extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-            /*  Añade los cambios que se realizarán en el esquema
-                en tu proxima versión
-             */
+        /*  Añade los cambios que se realizarán en el esquema
+            en tu proxima versión
+         */
+        /**DROP THE TABLES!*/
+        db.execSQL(TeamsDataSource.DELETE_TEAMS_SCRIPT);
+        onCreate(db);
     }
 
 }
