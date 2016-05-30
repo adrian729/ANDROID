@@ -5,9 +5,9 @@
 
     <!-- Vistes -->
     <string-array name="tab_layout_titles">
-        <item>rankings</item>
-        <item>weeks</item>
-        <item>teams</item>
+        <item>Classificacio</item>
+        <item>Jornades</item>
+        <item>Equips</item>
     </string-array>
 
     <!--Ranking-->
