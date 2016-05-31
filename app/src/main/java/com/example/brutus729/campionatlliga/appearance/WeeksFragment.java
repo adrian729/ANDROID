@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import com.example.brutus729.campionatlliga.R;
 
-public class Weeks extends Fragment {
+public class WeeksFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

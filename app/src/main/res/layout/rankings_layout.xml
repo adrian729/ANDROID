@@ -18,7 +18,8 @@
             android:layout_height="wrap_content"
             android:gravity="end"
             android:text="@string/ranking_rank"
-            android:textColor="@color/white"/>
+            android:textColor="@color/grey"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/ranking_team"
@@ -28,7 +29,8 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="1dp"
             android:text="@string/ranking_team_name"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/ranking_games"
@@ -39,7 +41,8 @@
             android:layout_marginStart="1dp"
             android:layout_marginEnd="1dp"
             android:text="@string/ranking_played_games"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/ranking_wins"
@@ -50,7 +53,8 @@
             android:layout_marginStart="1dp"
             android:layout_marginEnd="1dp"
             android:text="@string/ranking_wins"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/ranking_draws"
@@ -61,7 +65,8 @@
             android:layout_marginStart="1dp"
             android:layout_marginEnd="1dp"
             android:text="@string/ranking_draws"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/ranking_loses"
@@ -72,7 +77,8 @@
             android:layout_marginStart="1dp"
             android:layout_marginEnd="1dp"
             android:text="@string/ranking_loses"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/ranking_goals"
@@ -83,7 +89,8 @@
             android:layout_marginStart="1dp"
             android:layout_marginEnd="1dp"
             android:text="@string/ranking_goals"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/ranking_scores"
@@ -94,7 +101,8 @@
             android:layout_marginStart="1dp"
             android:layout_marginEnd="1dp"
             android:text="@string/ranking_scores"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 

@@ -19,7 +19,7 @@ import com.example.brutus729.campionatlliga.persistance.TeamsDataSource;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Teams extends Fragment {
+public class TeamsFragment extends Fragment {
 
     private List items;
 
@@ -57,7 +57,7 @@ public class Teams extends Fragment {
     private void setItemsNoDb(){
         this.items = new ArrayList();
         /** Llenar items sin DB (para pruebas) */
-        for(int i = 0; i < 10; ++i) items.add(new TeamsItem("equip"+i));
+        for(int i = 0; i < 10; ++i) items.add(new TeamsItem("equip"+i, "e"+i, "city"+i));
     }
 
     /**
@@ -66,7 +66,7 @@ public class Teams extends Fragment {
     private void setItemsFromDb(ViewGroup container){
         this.items = new ArrayList();
         TeamsDataSource dataSource = new TeamsDataSource(container.getContext());
-        //Cursor con TODA la info de la tabla de Teams
+        //Cursor con TODA la info de la tabla de TeamsFragment
         Cursor allTeams = dataSource.getAllTeams();
         //Recorrer items cursor
         if (allTeams.moveToFirst()){
@@ -75,6 +75,12 @@ public class Teams extends Fragment {
                 items.add(new TeamsItem(
                         allTeams.getString(allTeams.getColumnIndex(
                                 TeamsDataSource.ColumnTeams.NAME_TEAMS)
+                        ),
+                        allTeams.getString(allTeams.getColumnIndex(
+                                TeamsDataSource.ColumnTeams.SHORT_NAME_TEAMS)
+                        ),
+                        allTeams.getString(allTeams.getColumnIndex(
+                                TeamsDataSource.ColumnTeams.CITY_TEAMS)
                         )
                 ));
                 allTeams.moveToNext();

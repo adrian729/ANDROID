@@ -1,19 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="4dp"
-    android:background="@color/phantomWhite">
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    style="@style/teams_item">
 
+    <ImageView
+        android:id="@+id/team_shield_image"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/football_ball"
+        android:contentDescription="@string/team_shield"/>
+    <TextView
+        android:id="@+id/team_short_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:text="EX"
+        android:textColor="@color/black"/>
     <TextView
         android:id="@+id/team_name"
-        android:layout_width="0dp"
-        android:layout_weight="1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/team_name"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"
+        android:text="EquipX"
         android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/team_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/team_shield_image"
+        android:layout_below="@+id/team_short_name"
+        android:gravity="right|bottom"
+        android:text="city"
+        android:textStyle="bold|italic"
+        android:textColor="@color/black"
+        android:layout_alignBottom="@+id/team_shield_image" />
 
-</LinearLayout>
+</RelativeLayout>

@@ -51,6 +51,8 @@ public class TeamsItemAdapter extends BaseAdapter{
 
             holder = new ViewHolder();
             holder.name = (TextView) rowView.findViewById(R.id.team_name);
+            holder.short_name = (TextView) rowView.findViewById(R.id.team_short_name);
+            holder.city = (TextView) rowView.findViewById(R.id.team_city);
             rowView.setTag(holder);
         }
         else{
@@ -58,6 +60,8 @@ public class TeamsItemAdapter extends BaseAdapter{
         }
         TeamsItem item = this.items.get(position);
         holder.name.setText(item.getTeamsName());
+        holder.short_name.setText(item.getShortName());
+        holder.city.setText(item.getCity());
         /*FI TRY TO USE HOLDER */
 
         return rowView;
@@ -66,6 +70,8 @@ public class TeamsItemAdapter extends BaseAdapter{
     /** TRY TO USE HOLDER */
     static class ViewHolder {
         TextView name;
+        TextView short_name;
+        TextView city;
     }
     /*FI TRY TO USE HOLDER */
 }

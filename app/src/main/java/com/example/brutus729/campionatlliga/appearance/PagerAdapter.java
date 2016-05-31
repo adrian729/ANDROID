@@ -18,6 +18,11 @@ public class PagerAdapter extends FragmentPagerAdapter {
         mNumOfTabs = tabTitles.length;
     }
 
+    public PagerAdapter(FragmentManager fm, int numTabs) {
+        super(fm);
+        this.mNumOfTabs = numTabs;
+    }
+
     @Override
     public int getCount() {
         return mNumOfTabs;
@@ -28,19 +33,20 @@ public class PagerAdapter extends FragmentPagerAdapter {
 
         switch (position) {
             case 0:
-                Rankings rankings = new Rankings();
-                return rankings;
+                RankingsFragment rankingsFragment = new RankingsFragment();
+                return rankingsFragment;
             case 1:
-                Weeks weeks = new Weeks();
-                return weeks;
+                WeeksFragment weeksFragment = new WeeksFragment();
+                return weeksFragment;
             case 2:
-                Teams teams = new Teams();
-                return teams;
+                TeamsFragment teamsFragment = new TeamsFragment();
+                return teamsFragment;
             default:
                 return null;
         }
 
     }
+
 
     @Override
     public CharSequence getPageTitle(int position) {

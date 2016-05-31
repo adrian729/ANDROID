@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="4dp"
-    android:background="@color/phantomWhite">
+    style="@style/rankings_item">
 
     <TextView
         android:id="@+id/ranking_rank"
@@ -26,7 +26,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="1dp"
         android:text="@string/ranking_team_name"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/ranking_games"

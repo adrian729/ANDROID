@@ -20,7 +20,8 @@
     <string name="ranking_goals">G</string>
     <string name="ranking_scores">PTS</string>
 
-    <!--Teams-->
+    <!--TeamsFragment-->
     <string name="team_name">Nom Equip</string>
+    <string name="team_shield">Escut</string>
 
 </resources>

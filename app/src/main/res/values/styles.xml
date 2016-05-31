@@ -1,5 +1,15 @@
 <resources>
 
+    <!-- RankingsFragment -->
+    <style name="rankings_item" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@drawable/rankings_item_style</item>
+    </style>
+
+    <!-- TeamsFragment -->
+    <style name="teams_item" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@drawable/teams_item_style</item>
+    </style>
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!--   your app branding color for the app bar -->

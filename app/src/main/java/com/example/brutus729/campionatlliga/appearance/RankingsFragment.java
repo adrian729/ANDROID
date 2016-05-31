@@ -15,7 +15,7 @@ import com.example.brutus729.campionatlliga.objects.RankingsItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Rankings extends Fragment {
+public class RankingsFragment extends Fragment {
 
     private List items;
 
@@ -26,7 +26,7 @@ public class Rankings extends Fragment {
         ListView listView = (ListView) view.findViewById(R.id.rankings_list_view);
 
         this.items = new ArrayList();
-        for(int i = 0; i < 10; ++i) items.add(new RankingsItem("team"+i, 99+2*i, 99+i, 99-3*i, (99+i)*2));
+        for(int i = 0; i < 10; ++i) items.add(new RankingsItem("Equip"+i, 99+2*i, 99+i, 99-3*i, (99+i)*2));
         //TODO: ORDENAR LISTA POR PUNTOS Y PONER RANKING QUE TOQUE (se tendra que hacer un comparator)
 
         // Sets the data behind this ListView
@@ -34,6 +34,8 @@ public class Rankings extends Fragment {
 
         // Register a callback to be invoked when an item in this AdapterView
         // has been clicked
+        /* DE MOMENT NO VOLEM FER CLICABLE RANKINGS. OPCIONAL
+        //(per mostrar mes dades del ranking dun equip concret)
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapter, View view,
@@ -43,7 +45,7 @@ public class Rankings extends Fragment {
                         Toast.LENGTH_SHORT).show();
             }
         });
-
+        */
         return view;
     }
 }

@@ -7,8 +7,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class TeamsReaderDbHelper  extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "Teams.db";
-    public static final int DATABASE_VERSION = 2;
+    public static final String DATABASE_NAME = "TeamsFragment.db";
+    public static final int DATABASE_VERSION = 3;
 
     public TeamsReaderDbHelper(Context context){
         super(context,DATABASE_NAME,null,DATABASE_VERSION);

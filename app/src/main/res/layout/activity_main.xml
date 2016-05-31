@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
     android:fitsSystemWindows="true">
 
     <RelativeLayout
@@ -54,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_input_get"
-        app:backgroundTint="@color/red"/>
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/grey"/>
 
 </android.support.design.widget.CoordinatorLayout>
