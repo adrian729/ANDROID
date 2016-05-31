@@ -5,6 +5,7 @@ public class TeamsItem {
 
 
     private String name;
+    private String short_name;
 
     public TeamsItem(){
         super();
@@ -23,4 +24,11 @@ public class TeamsItem {
         this.name = team_name;
     }
 
+    public String getShortName() {
+        return short_name;
+    }
+
+    public void setShortName(String short_name) {
+        this.short_name = short_name;
+    }
 }

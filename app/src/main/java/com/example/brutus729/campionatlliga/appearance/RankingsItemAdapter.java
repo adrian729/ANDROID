@@ -92,7 +92,7 @@ public class RankingsItemAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
         RankingsItem item = this.items.get(position);
-        holder.rank.setText(item.getRank());
+        holder.rank.setText(String.valueOf(position+1));//La llista ja haura d'estar ordenada per punts!
         holder.team_name.setText(item.getTeamName());
         holder.played_games.setText(item.getPlayedGames());
         holder.wins.setText(item.getWins());

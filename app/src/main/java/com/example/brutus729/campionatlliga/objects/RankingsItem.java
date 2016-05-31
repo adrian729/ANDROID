@@ -6,7 +6,6 @@ package com.example.brutus729.campionatlliga.objects;
 public class RankingsItem {
 
 
-    private int rank;
     private String team_name;
     private int played_games;
     private int wins;
@@ -19,10 +18,9 @@ public class RankingsItem {
         super();
     }
 
-    public RankingsItem(int rank, String team, int wins,
+    public RankingsItem(String team, int wins,
                         int draws, int loses, int goals) {
         super();
-        this.rank = rank;
         this.team_name = team;
         this.played_games = wins + draws + loses;
         this.wins = wins;
@@ -30,14 +28,6 @@ public class RankingsItem {
         this.loses = loses;
         this.goals = goals;
         this.score = 3*wins + draws;
-    }
-
-    public String getRank() {
-        return String.valueOf(rank);
-    }
-
-    public void setRank(int rank) {
-        this.rank = rank;
     }
 
     public String getTeamName() {

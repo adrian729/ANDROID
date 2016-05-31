@@ -26,7 +26,8 @@ public class Rankings extends Fragment {
         ListView listView = (ListView) view.findViewById(R.id.rankings_list_view);
 
         this.items = new ArrayList();
-        for(int i = 0; i < 10; ++i) items.add(new RankingsItem(i+1, "team"+i, 99, 99, 99, 99));
+        for(int i = 0; i < 10; ++i) items.add(new RankingsItem("team"+i, 99+2*i, 99+i, 99-3*i, (99+i)*2));
+        //TODO: ORDENAR LISTA POR PUNTOS Y PONER RANKING QUE TOQUE (se tendra que hacer un comparator)
 
         // Sets the data behind this ListView
         listView.setAdapter(new RankingsItemAdapter(container.getContext(), items));
