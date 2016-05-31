@@ -52,7 +52,18 @@ public class Teams extends Fragment {
         this.items = new ArrayList();
         dataSource = new TeamsDataSource(container.getContext());
         Cursor allTeams = dataSource.getAllTeams();
-        for(int i = 0; i < 10; ++i) items.add(new TeamsItem("equip"+i));
+        if (allTeams.moveToFirst()){
+            while(!allTeams.isAfterLast()){
+                items.add(new TeamsItem(
+                        allTeams.getString(allTeams.getColumnIndex(
+                                TeamsDataSource.ColumnTeams.NAME_TEAMS))));
+                // do what ever you want here
+                allTeams.moveToNext();
+            }
+        }
+        allTeams.close();
+        /*
+        for(int i = 0; i < 10; ++i) items.add(new TeamsItem("equip"+i));*/
 
         /**Prueba con TeamsItemAdapter*/
         // Sets the data behind this ListView
