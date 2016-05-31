@@ -9,6 +9,9 @@ import android.provider.BaseColumns;
 
 public class TeamsDataSource {
 
+    //TODO: como se puede hacer todo en una sola DB con diferentes tablas? Es mas facil hacer varias por separado???
+    //TODO:UPDATE de la DB
+
     //Metainformación de la base de datos
     public static final String TEAMS_TABLE_NAME = "TeamsFragment";
     public static final String STRING_TYPE = "text";

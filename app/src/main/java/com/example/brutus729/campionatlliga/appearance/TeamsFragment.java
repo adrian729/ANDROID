@@ -23,6 +23,8 @@ public class TeamsFragment extends Fragment {
 
     private List items;
 
+    //TODO: UPDATE DB i UPDATE de la View o activity al canviar dades en execucio.
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.teams_layout, container, false);
@@ -41,6 +43,7 @@ public class TeamsFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapter, View view,
                                     int position, long arg) {
+                //TODO: canviar el que fa al clicar per un intent a una nova activitat (sha de crear la activitat com a filla de Main, el layout, etc)
                 TeamsItem item = (TeamsItem)items.get(position);
                 Toast.makeText(getActivity(), item.getTeamsName() + " Clicked!",
                         Toast.LENGTH_SHORT).show();

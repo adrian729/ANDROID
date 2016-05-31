@@ -17,6 +17,8 @@ import java.util.List;
 
 public class RankingsFragment extends Fragment {
 
+    //TODO: UPDATE de la View o activity al canviar dades en execucio.
+
     private List items;
 
     @Override

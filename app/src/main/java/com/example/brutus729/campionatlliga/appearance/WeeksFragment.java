@@ -12,6 +12,7 @@ public class WeeksFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        //TODO: Omplir Weeks amb ExpandableListView (exemple a MyApplication, weeks). Necessari Expandable list adapter nou layout i alguns items layout
         return inflater.inflate(R.layout.weeks_layout, container, false);
     }
 }
