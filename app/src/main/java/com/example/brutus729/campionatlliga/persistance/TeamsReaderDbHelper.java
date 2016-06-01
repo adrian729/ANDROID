@@ -7,8 +7,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class TeamsReaderDbHelper  extends SQLiteOpenHelper {
 
-    //TODO: como se puede hacer todo en una sola DB con diferentes tablas? Es mas facil hacer varias por separado???
-    //TODO: UPDATE de la DB.
 
     public static final String DATABASE_NAME = "TeamsFragment.db";
     public static final int DATABASE_VERSION = 3;

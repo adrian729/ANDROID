@@ -23,8 +23,6 @@ public class TeamsFragment extends Fragment {
 
     private List items;
 
-    //TODO: UPDATE DB i UPDATE de la View o activity al canviar dades en execucio.
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.teams_layout, container, false);

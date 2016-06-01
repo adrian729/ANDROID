@@ -10,6 +10,14 @@
         <item name="android:background">@drawable/teams_item_style</item>
     </style>
 
+    <!-- WeeksFragment -->
+    <style name="weeks_header_item" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@drawable/weeks_header_item_style</item>
+    </style>
+    <style name="weeks_child_item" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@drawable/weeks_child_item_style</item>
+    </style>
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!--   your app branding color for the app bar -->
