@@ -9,11 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 import com.example.brutus729.campionatlliga.R;
-import com.example.brutus729.campionatlliga.objects.TeamsItem;
+import com.example.brutus729.campionatlliga.objects.Player;
+import com.example.brutus729.campionatlliga.objects.Team;
 import com.example.brutus729.campionatlliga.persistance.TeamsDataSource;
 
 import java.util.ArrayList;
@@ -42,7 +42,7 @@ public class TeamsFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapter, View view,
                                     int position, long arg) {
                 //TODO: canviar el que fa al clicar per un intent a una nova activitat (sha de crear la activitat com a filla de Main, el layout, etc)
-                TeamsItem item = (TeamsItem)items.get(position);
+                Team item = (Team)items.get(position);
                 Toast.makeText(getActivity(), item.getTeamsName() + " Clicked!",
                         Toast.LENGTH_SHORT).show();
             }
@@ -58,7 +58,9 @@ public class TeamsFragment extends Fragment {
     private void setItemsNoDb(){
         this.items = new ArrayList();
         /** Llenar items sin DB (para pruebas) */
-        for(int i = 0; i < 10; ++i) items.add(new TeamsItem("equip"+i, "e"+i, "city"+i));
+        List<Player> players = new ArrayList<Player>();
+        for(int i = 0; i < 10; ++i) items.add(new Team("equip"+i, "e"+i, "city"+i,
+                "football_ball.png", 0, players));
     }
 
     /**
@@ -73,7 +75,8 @@ public class TeamsFragment extends Fragment {
         if (allTeams.moveToFirst()){
             //Cojer datos cursor (y ponerlos en items)
             while(!allTeams.isAfterLast()){
-                items.add(new TeamsItem(
+                //TODO: ACONSEGUIR GOLS I ARRAY DE PLAYERS DE LA DB!
+                items.add(new Team(
                         allTeams.getString(allTeams.getColumnIndex(
                                 TeamsDataSource.ColumnTeams.NAME_TEAMS)
                         ),
@@ -82,13 +85,20 @@ public class TeamsFragment extends Fragment {
                         ),
                         allTeams.getString(allTeams.getColumnIndex(
                                 TeamsDataSource.ColumnTeams.CITY_TEAMS)
-                        )
+                        ),
+                        allTeams.getString(allTeams.getColumnIndex(
+                                TeamsDataSource.ColumnTeams.SHIELD_TEAMS)
+                        ),
+                        0,
+                        new ArrayList<Player>()
                 ));
                 allTeams.moveToNext();
             }
         }
         allTeams.close();
     }
+
+
 
 }
 

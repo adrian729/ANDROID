@@ -1,7 +1,7 @@
 package com.example.brutus729.campionatlliga.objects;
 
 
-public class RankingsItem {
+public class Ranking {
 
 
     private String team_name;
@@ -12,12 +12,8 @@ public class RankingsItem {
     private int goals;
     private int score;
 
-    public RankingsItem() {
-        super();
-    }
-
-    public RankingsItem(String team, int wins,
-                        int draws, int loses, int goals) {
+    public Ranking(String team, int wins,
+                   int draws, int loses, int goals) {
         super();
         this.team_name = team;
         this.played_games = wins + draws + loses;
@@ -36,12 +32,12 @@ public class RankingsItem {
         this.team_name = name;
     }
 
-    public String getPlayedGames() {
-        return String.valueOf(played_games);
+    public int getPlayedGames() {
+        return played_games;
     }
 
-    public String getWins() {
-        return String.valueOf(wins);
+    public int getWins() {
+        return wins;
     }
 
     public void setWins(int wins) {
@@ -50,8 +46,8 @@ public class RankingsItem {
         updateScore();
     }
 
-    public String getDraws() {
-        return String.valueOf(draws);
+    public int getDraws() {
+        return draws;
     }
 
     public void setDraws(int draws) {
@@ -60,8 +56,8 @@ public class RankingsItem {
         updateScore();
     }
 
-    public String getLoses() {
-        return String.valueOf(loses);
+    public int getLoses() {
+        return loses;
     }
 
     public void setLoses(int loses) {
@@ -69,16 +65,16 @@ public class RankingsItem {
         updatePlayedGames();
     }
 
-    public String getGoals() {
-        return String.valueOf(goals);
+    public int getGoals() {
+        return goals;
     }
 
     public void setGoals(int goals) {
         this.goals = goals;
     }
 
-    public String getScore() {
-        return String.valueOf(score);
+    public int getScore() {
+        return score;
     }
 
     private void updatePlayedGames(){

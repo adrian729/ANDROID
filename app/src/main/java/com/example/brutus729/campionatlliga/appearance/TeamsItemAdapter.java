@@ -9,15 +9,15 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.brutus729.campionatlliga.R;
-import com.example.brutus729.campionatlliga.objects.TeamsItem;
+import com.example.brutus729.campionatlliga.objects.Team;
 
 import java.util.List;
 
 public class TeamsItemAdapter extends BaseAdapter{
     private Context context;
-    private List<TeamsItem> items;
+    private List<Team> items;
 
-    public TeamsItemAdapter(Context context, List<TeamsItem> items) {
+    public TeamsItemAdapter(Context context, List<Team> items) {
         this.context = context;
         this.items = items;
     }
@@ -58,7 +58,7 @@ public class TeamsItemAdapter extends BaseAdapter{
         else{
             holder = (ViewHolder) convertView.getTag();
         }
-        TeamsItem item = this.items.get(position);
+        Team item = this.items.get(position);
         holder.name.setText(item.getTeamsName());
         holder.short_name.setText(item.getShortName());
         holder.city.setText(item.getCity());

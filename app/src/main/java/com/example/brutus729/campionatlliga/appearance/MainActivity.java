@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
             ab.setDisplayHomeAsUpEnabled(true);
         }
 
-
         /*Preparar TabLayout i ViewPager*/
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         viewPager.setAdapter(new PagerAdapter(getSupportFragmentManager(),

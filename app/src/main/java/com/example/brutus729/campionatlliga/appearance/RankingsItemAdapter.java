@@ -9,16 +9,16 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.brutus729.campionatlliga.R;
-import com.example.brutus729.campionatlliga.objects.RankingsItem;
+import com.example.brutus729.campionatlliga.objects.Ranking;
 
 import java.util.List;
 
 public class RankingsItemAdapter extends BaseAdapter {
 
     private Context context;
-    private List<RankingsItem> items;
+    private List<Ranking> items;
 
-    public RankingsItemAdapter(Context context, List<RankingsItem> items) {
+    public RankingsItemAdapter(Context context, List<Ranking> items) {
         this.context = context;
         this.items = items;
     }
@@ -59,7 +59,7 @@ public class RankingsItemAdapter extends BaseAdapter {
         TextView goals = (TextView) rowView.findViewById(R.id.ranking_goals);
         TextView score = (TextView) rowView.findViewById(R.id.ranking_scores);
 
-        RankingsItem item = this.items.get(position);
+        Ranking item = this.items.get(position);
         rank.setText(item.getRank());
         team_name.setText(item.getTeamName());
         played_games.setText(item.getPlayedGames());
@@ -91,15 +91,15 @@ public class RankingsItemAdapter extends BaseAdapter {
         else{
             holder = (ViewHolder) convertView.getTag();
         }
-        RankingsItem item = this.items.get(position);
+        Ranking item = this.items.get(position);
         holder.rank.setText(String.valueOf(position+1));//La llista ja haura d'estar ordenada per punts!
         holder.team_name.setText(item.getTeamName());
-        holder.played_games.setText(item.getPlayedGames());
-        holder.wins.setText(item.getWins());
-        holder.draws.setText(item.getDraws());
-        holder.loses.setText(item.getLoses());
-        holder.goals.setText(item.getGoals());
-        holder.score.setText(item.getScore());
+        holder.played_games.setText(String.valueOf(item.getPlayedGames()));
+        holder.wins.setText(String.valueOf(item.getWins()));
+        holder.draws.setText(String.valueOf(item.getDraws()));
+        holder.loses.setText(String.valueOf(item.getLoses()));
+        holder.goals.setText(String.valueOf(item.getGoals()));
+        holder.score.setText(String.valueOf(item.getScore()));
         /*FI TRY TO USE HOLDER */
 
         return rowView;
