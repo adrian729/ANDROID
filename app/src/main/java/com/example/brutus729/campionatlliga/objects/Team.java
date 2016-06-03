@@ -15,7 +15,6 @@ public class Team {
 
     public Team(String team_name, String short_name, String city, String shield,
                 int total_goals, List<Player> players){
-        super();
         this.name = team_name;
         this.short_name = short_name;
         this.city = city;

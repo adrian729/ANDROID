@@ -14,7 +14,6 @@ public class Ranking {
 
     public Ranking(String team, int wins,
                    int draws, int loses, int goals) {
-        super();
         this.team_name = team;
         this.played_games = wins + draws + loses;
         this.wins = wins;

@@ -77,6 +77,7 @@ public class RankingsFragment extends Fragment {
             //Cojer datos cursor (y ponerlos en items)
             while(!allTeams.isAfterLast()){
                 //TODO: ACONSEGUIR GOLS I ARRAY DE PLAYERS DE LA DB!!
+                //TODO: FER LA RECOLLIDA DE DADES EN UNA CLASSE MES GENERAL QUE RETORNI DIRECTAMENT ELS EQUIPS/JUGADORS ETC!!! (
                 teams.add(new Team(
                         allTeams.getString(allTeams.getColumnIndex(
                                 TeamsDataSource.ColumnTeams.NAME_TEAMS)
