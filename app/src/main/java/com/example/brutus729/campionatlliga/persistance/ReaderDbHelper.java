@@ -9,7 +9,7 @@ public class ReaderDbHelper extends SQLiteOpenHelper {
 
 
     public static final String DATABASE_NAME = "Football.db";
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 3;
 
     public ReaderDbHelper(Context context){
         super(context,DATABASE_NAME,null,DATABASE_VERSION);
@@ -22,10 +22,12 @@ public class ReaderDbHelper extends SQLiteOpenHelper {
         db.execSQL(TeamsDataSource.CREATE_TEAMS_SCRIPT);
         db.execSQL(PlayersDataSource.CREATE_PLAYERS_SCRIPT);
         db.execSQL(MatchesDataSource.CREATE_MATCHES_SCRIPT);
+        db.execSQL(GoalsDataSource.CREATE_GOALS_SCRIPT);
         //Insertar registros iniciales
         db.execSQL(TeamsDataSource.INSERT_TEAMS_SCRIPT);
         db.execSQL(PlayersDataSource.INSERT_PLAYERS_SCRIPT);
         db.execSQL(MatchesDataSource.INSERT_MATCHES_SCRIPT);
+        //db.execSQL(GoalsDataSource.INSERT_GOALS_SCRIPT);
 
         /*  Nota: Usamos execSQL() ya que las sentencias son
             para uso interno y no están relacionadas con entradas
@@ -44,6 +46,7 @@ public class ReaderDbHelper extends SQLiteOpenHelper {
         db.execSQL(TeamsDataSource.DELETE_TEAMS_SCRIPT);
         db.execSQL(PlayersDataSource.DELETE_PLAYERS_SCRIPT);
         db.execSQL(MatchesDataSource.DELETE_MATCHES_SCRIPT);
+        db.execSQL(GoalsDataSource.DELETE_GOALS_SCRIPT);
         onCreate(db);
     }
 

@@ -60,14 +60,16 @@ public class TeamsFragment extends Fragment {
         /** Llenar items sin DB (para pruebas) */
         List<Player> players = new ArrayList<Player>();
         for(int i = 0; i < 10; ++i) items.add(new Team("equip"+i, "e"+i, "city"+i,
-                "football_ball.png", 0, players));
+                "football_ball.png"));
     }
 
     /**
      * Crea items con los datos de la DB.
      */
     private void setItemsFromDb(ViewGroup container){
+
         this.items = new ArrayList();
+
         TeamsDataSource dataSource = new TeamsDataSource(container.getContext());
         //Cursor con TODA la info de la tabla de TeamsFragment
         Cursor allTeams = dataSource.getAllTeams();
@@ -88,14 +90,15 @@ public class TeamsFragment extends Fragment {
                         ),
                         allTeams.getString(allTeams.getColumnIndex(
                                 TeamsDataSource.ColumnTeams.SHIELD_TEAMS)
-                        ),
-                        0,
-                        new ArrayList<Player>()
+                        )
                 ));
                 allTeams.moveToNext();
             }
         }
         allTeams.close();
+
+
+
     }
 
 

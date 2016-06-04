@@ -90,9 +90,7 @@ public class RankingsFragment extends Fragment {
                         ),
                         allTeams.getString(allTeams.getColumnIndex(
                                 TeamsDataSource.ColumnTeams.SHIELD_TEAMS)
-                        ),
-                        0,
-                        new ArrayList<Player>()
+                        )
                 ));
                 allTeams.moveToNext();
             }
